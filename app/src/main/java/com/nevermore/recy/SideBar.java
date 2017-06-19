@@ -76,6 +76,9 @@ public class SideBar extends View {
 
     private int getIndex(float y){
         int index = (int) ((y - getPaddingTop()) / cellHeight);
+        if(index<0){
+            index =0;
+        }
         if(index>charaters.length-1){
             index = charaters.length-1;
         }
